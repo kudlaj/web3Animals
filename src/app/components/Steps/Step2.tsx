@@ -14,20 +14,21 @@ interface StepProps {
 
 
 const Step2: React.FC<StepProps> = ({ next, back }) => {
-  const { animals, selectedAnimal, resetSelectedAnimal, setSelectedAnimalNameAndDescription } = useBoundStore();
+  const { selectedAnimal, resetSelectedAnimal, setSelectedAnimalCustomData } = useBoundStore();
 
 
   // Define a default animal
   const defaultAnimal: Animal = {
     name: "Select Your Animal",
     image: "placeholder.png",
+    alias: "placeholder",
     description: "Select Your Animal"
   };
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [name, setName] = useState(selectedAnimal?.customData?.name ?? '');
+  const [description, setDescription] = useState(selectedAnimal?.customData?.description ?? '');
 
   const save = () => {
-    setSelectedAnimalNameAndDescription(name, description);
+    setSelectedAnimalCustomData(name, description);
     next();
   }
 

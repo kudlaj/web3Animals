@@ -2,17 +2,26 @@ import { Weapon } from "@/types/animal";
 const weapons: Weapon[] = [{
   id: 1,
   name: 'Yellow Umbrella',
-  image: 'umbrella.png'
+  image: 'umbrella.png',
+  alias: 'umbrella'
 },
 {
   id: 2,
   name: 'Compfy Pillow',
-  image: 'pillow.png'
+  image: 'pillow.png',
+  alias: 'pillow'
 },
 {
   id: 3,
   name: 'Deathly Chainsaw',
-  image: 'chainsaw.png'
+  image: 'chainsaw.png',
+  alias: 'chainsaw'
+},
+{
+  id: 3,
+  name: 'Bubble Blaster',
+  image: 'bubble_gun.png',
+  alias: 'bubble_gun'
 }
 ];
 

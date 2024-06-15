@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import { SiFoodpanda } from 'react-icons/si';
-import { FaInfo, FaUserNinja } from 'react-icons/fa';
+import { FaInfo, FaUserNinja, FaPlayCircle } from 'react-icons/fa';
+import { IoDocumentOutline } from "react-icons/io5";
+
 import { Card } from 'react-bootstrap';
 import { useBoundStore } from '../store/index'
 import styles from "./page.module.css";
@@ -12,9 +14,11 @@ import Step2 from '../components/Steps/Step2';
 import Step3 from '../components/Steps/Step3';
 
 const stepsData = [
-  { icon: <SiFoodpanda />, title: 'Step 1: Choose Animal' },
-  { icon: <FaInfo />, title: 'Step 2: Name' },
-  { icon: <FaUserNinja />, title: 'Step 3: Choose Weapon' }
+  { icon: <SiFoodpanda />, title: 'Choose Animal' },
+  { icon: <FaInfo />, title: 'Choose Name' },
+  { icon: <FaUserNinja />, title: 'Choose Weapon' },
+  { icon: <IoDocumentOutline />, title: 'Create' },
+  { icon: <FaPlayCircle />, title: 'Play' },
 ];
 
 const CreatePage: React.FC = () => {

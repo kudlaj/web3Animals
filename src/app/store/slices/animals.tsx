@@ -11,7 +11,7 @@ export type AnimalState = {
   selectedAnimal: SelectedAnimal | null;
   setAnimals: (animals: Animal[]) => void;
   setSelectedAnimal: (animal: Animal) => void;
-  setSelectedAnimalNameAndDescription: (name: string, description: string) => void;
+  setSelectedAnimalCustomData: (name: string, description: string) => void;
   setSelectedAnimalImage: (image: string) => void;
   resetSelectedAnimal: () => void;
   fetchAnimals: () => Promise<void>;
@@ -30,19 +30,21 @@ export const createAnimalSlice = (set: any, get: any) : AnimalState => {
     setSelectedAnimal: (animal: Animal) => set({ selectedAnimal: { animal } }),
     resetSelectedAnimal: () => set({ selectedAnimal: {
       image: 'placeholder.png',
+      alias: 'placeholder',
       description: '...',
       name: 'Select Your Combat Animal'
     } }),
-    setSelectedAnimalNameAndDescription: (name: string, description: string) => set({ selectedAnimal: { 
-      animal: {
-        ...get().selectedAnimal?.animal,
-        name, 
-        description 
+    setSelectedAnimalCustomData: (name: string, description: string) => set({ selectedAnimal: { 
+      ...get().selectedAnimal,
+      customData: {
+        name,
+        description
       }
     } }),
     setSelectedAnimalImage: (image: string) => set({ selectedAnimal: {
-      animal: {
-        ...get().selectedAnimal?.animal,
+      ...get().selectedAnimal,
+      customData: {
+        ...get().selectedAnimal?.customData,
         image
       }
     } }),

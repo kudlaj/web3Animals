@@ -12,6 +12,7 @@ export type AnimalProperties = {
 export type Animal = {
   id?: number;
   name: string;
+  alias: string;
   description: string;
   image: string;
   properties?: AnimalProperties;
@@ -22,9 +23,17 @@ export type Weapon = {
   name: string;
   description?: string;
   image: string;
+  alias: string;
+};
+
+export type CustomAnimalData = {
+  name: string;
+  description: string;
+  image?: string;
 };
 
 export type SelectedAnimal = {
+  customData?: CustomAnimalData;
   animal: Animal;
   weapon: Weapon;
 };

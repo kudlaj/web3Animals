@@ -20,7 +20,8 @@ const Step1: React.FC<StepProps> = ({ next }) => {
   const defaultAnimal: Animal = {
     name: "Select Your Animal",
     image: "placeholder.png",
-    description: "Select Your Animal"
+    description: "Select Your Animal",
+    alias: "placeholder"
   };
   
   return (
