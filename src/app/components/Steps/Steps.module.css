@@ -1,0 +1,12 @@
+/* components/Steps.module.css */
+.stepsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}

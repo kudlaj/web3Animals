@@ -1,0 +1,62 @@
+/* components/Step.module.css */
+.stepContainer {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.stepContainerActive {
+  opacity: 1;
+}
+
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #9e9898; 
+}
+
+.icon {
+  position: relative;
+  top: -1px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.titleActive {
+  font-weight: bold;
+}
+.bgCircle {
+  background-color: #212429;
+}
+.description {
+  font-size: 14px;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.animalInfo {
+  max-width: 300px;
+  padding-top: 2rem;
+}
+
+.animalCircle {
+  background-color: #fbfbfb;
+  padding: 2px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.yellowGlow {
+  box-shadow: 0 0 31px 9px rgb(250 180 55);
+  background-color: rgb(56 56 56 / 55%) !important;
+}
+
+.selected {
+  border-color: #f0c62f;
+}

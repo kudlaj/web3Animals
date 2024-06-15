@@ -105,3 +105,8 @@ a {
     color-scheme: dark;
   }
 }
+.bg-secondary {
+  --bs-bg-opacity: 0.8;
+  background-color: rgb(96 88 88) !important
+
+}
