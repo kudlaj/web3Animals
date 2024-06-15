@@ -4,7 +4,7 @@ import SelectedAnimalCard from './SelectedAnimalCard';
 import AnimalCard from './AnimalCard'; 
 import styles from './Step.module.css';
 import { useBoundStore } from '../../store/index'
-import { Animal } from '../../store/types/animal';
+import { Animal } from '../../types/animal';
 
 interface StepProps {
   next: () => void;
@@ -20,7 +20,8 @@ const Step1: React.FC<StepProps> = ({ next }) => {
   const defaultAnimal: Animal = {
     name: "Select Your Animal",
     image: "placeholder.png",
-    description: "Select Your Animal"
+    description: "Select Your Animal",
+    alias: "placeholder"
   };
   
   return (

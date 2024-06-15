@@ -4,7 +4,7 @@ import SelectedAnimalCard from './SelectedAnimalCard';
 import AnimalCard from './AnimalCard'; 
 import styles from './Step.module.css';
 import { useBoundStore } from '../../store/index'
-import { Animal } from '../../store/types/animal';
+import { Animal } from '../../types/animal';
 
 interface StepProps {
   next: () => void;
@@ -14,20 +14,21 @@ interface StepProps {
 
 
 const Step2: React.FC<StepProps> = ({ next, back }) => {
-  const { animals, selectedAnimal, resetSelectedAnimal, setSelectedAnimalNameAndDescription } = useBoundStore();
+  const { selectedAnimal, resetSelectedAnimal, setSelectedAnimalCustomData } = useBoundStore();
 
 
   // Define a default animal
   const defaultAnimal: Animal = {
     name: "Select Your Animal",
     image: "placeholder.png",
+    alias: "placeholder",
     description: "Select Your Animal"
   };
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [name, setName] = useState(selectedAnimal?.customData?.name ?? '');
+  const [description, setDescription] = useState(selectedAnimal?.customData?.description ?? '');
 
   const save = () => {
-    setSelectedAnimalNameAndDescription(name, description);
+    setSelectedAnimalCustomData(name, description);
     next();
   }
 
