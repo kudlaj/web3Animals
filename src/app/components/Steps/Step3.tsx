@@ -4,7 +4,7 @@ import SelectedAnimalCard from './SelectedAnimalCard';
 import WeaponCard from './WeaponCard'; 
 import styles from './Step.module.css';
 import { useBoundStore } from '../../store/index'
-import { Animal } from '../../store/types/animal';
+import { Animal } from '../../types/animal';
 
 interface StepProps {
   next: () => void;

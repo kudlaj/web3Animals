@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { RiBearSmileLine } from "react-icons/ri";
-import { Animal } from '../../store/types/animal';
+import { Animal } from '../../types/animal';
 import styles from './Step.module.css'; 
 
 interface SelectedAnimalCardProps {
