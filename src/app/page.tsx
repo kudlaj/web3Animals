@@ -18,7 +18,7 @@ export default function Home() {
         <p className="lead mb-4">An epic battle between adorable and fierce animals awaits you!</p>
 
           <Link href="/create" className="font-bold mb-5 py-2 px-4" style={{ display: 'inline-block', backgroundColor: '#007bff', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.25rem', textDecoration: 'none' }}>
-            Play Now
+            Create your Deathly Fighter and Play
           </Link>
 
         </div>
