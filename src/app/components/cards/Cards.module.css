@@ -1,0 +1,75 @@
+
+
+
+.bgCircle {
+  background-color: #212429;
+}
+.description {
+  font-size: 14px;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.animalInfo {
+  max-width: 300px;
+  padding-top: 2rem;
+  min-width: 90%;
+}
+
+.animalCircle {
+  background-color: #fbfbfb;
+  padding: 2px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.yellowGlow {
+  box-shadow: 0 0 31px 9px rgb(250 180 55);
+  background-color: rgb(56 56 56 / 55%) !important;
+}
+
+.selected {
+  border-color: #f0c62f;
+}
+
+
+.selectedAnimalCard {
+  
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+@media (min-width: 1100px) {
+  .selectedAnimalCard {
+    min-width: 30rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .selectedAnimalCard {
+    margin: 0rem 0rem;
+  }
+  .animalCard {
+    margin: 1rem 0rem;
+  }
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+.cursorPointer {
+  cursor: pointer;
+}

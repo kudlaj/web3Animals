@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import SelectedAnimalCard from './SelectedAnimalCard'; 
-import AnimalCard from './AnimalCard'; 
+import SelectedAnimalCard from '../cards/SelectedAnimalCard'; 
+import AnimalCard from '../cards/AnimalCard'; 
 import styles from './Step.module.css';
 import { useBoundStore } from '../../store/index'
 import { Animal } from '../../types/animal';

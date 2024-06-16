@@ -12,6 +12,7 @@ export type AnimalState = {
   setAnimals: (animals: Animal[]) => void;
   setSelectedAnimal: (animal: Animal) => void;
   setSelectedAnimalCustomData: (name: string, description: string) => void;
+  setSelectedAnimalWeapon: (weapon: Weapon) => void;
   setSelectedAnimalImage: (image: string) => void;
   resetSelectedAnimal: () => void;
   fetchAnimals: () => Promise<void>;
@@ -40,6 +41,11 @@ export const createAnimalSlice = (set: any, get: any) : AnimalState => {
         name,
         description
       }
+    } }),
+    setSelectedAnimalWeapon: (weapon: Weapon) => set({ selectedAnimal: {
+      ...get().selectedAnimal,
+      weapon,
+     
     } }),
     setSelectedAnimalImage: (image: string) => set({ selectedAnimal: {
       ...get().selectedAnimal,

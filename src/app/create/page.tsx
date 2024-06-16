@@ -19,7 +19,6 @@ const stepsData = [
   { icon: <FaInfo />, title: 'Choose Name' },
   { icon: <FaUserNinja />, title: 'Choose Weapon' },
   { icon: <IoDocumentOutline />, title: 'Create' },
-  { icon: <FaPlayCircle />, title: 'Play' },
 ];
 
 const CreatePage: React.FC = () => {

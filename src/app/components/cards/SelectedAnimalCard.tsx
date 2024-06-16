@@ -6,7 +6,7 @@ import { RiBearSmileLine } from "react-icons/ri";
 import { FaInfoCircle } from 'react-icons/fa'; // Import FaInfoCircle
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { Animal } from '../../types/animal';
-import styles from './Step.module.css';
+import styles from './Cards.module.css';
 
 interface SelectedAnimalCardProps {
   selectedAnimal: Animal;

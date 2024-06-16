@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import SelectedAnimalCard from './SelectedAnimalCard'; 
-import WeaponCard from './WeaponCard'; 
+import SelectedAnimalCard from '../cards/SelectedAnimalCard'; 
+import WeaponCard from '../cards/WeaponCard'; 
 import styles from './Step.module.css';
 import { useBoundStore } from '../../store/index'
 import { Animal, CustomAnimalData , Weapon} from '@/types/animal';
@@ -22,11 +22,12 @@ interface StepProps {
 
 
 const Step3: React.FC<StepProps> = ({ next, back }) => {
-  const { weapons, selectedAnimal, resetSelectedAnimal, setSelectedAnimalImage } = useBoundStore();
+  const { weapons, selectedAnimal, resetSelectedAnimal, setSelectedAnimalImage, setSelectedAnimalWeapon } = useBoundStore();
   const [displayAnimal, setDisplayAnimal] = useState<Animal>(selectedAnimal?.animal ?? defaultAnimal);
 
   const setSelectedWeapon = (weapon: Weapon) => {
     setSelectedAnimalImage(`/weapons/${selectedAnimal?.animal.alias}_${weapon.alias}.png`);
+    setSelectedAnimalWeapon(weapon);
   }
   const resetDisplayAnimal = () => {
     console.log(selectedAnimal?.animal.image);
@@ -73,8 +74,8 @@ const Step3: React.FC<StepProps> = ({ next, back }) => {
                   image={weapon.image} 
                   name={weapon.name} 
                   description={weapon?.description ?? ''} 
-                  onClick={() => setSelectedWeapon(weapon) } // Function to set the selected animal
-                  selected={selectedAnimal?.weapon?.name === weapon.name} // Check if the animal is selected
+                  onClick={() => setSelectedWeapon(weapon) }
+                  selected={selectedAnimal?.weapon?.name === weapon.name} 
                 />
               </Col>
             ))}

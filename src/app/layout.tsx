@@ -24,7 +24,6 @@ export default function RootLayout({
           <main className={styles.main}>
           <Menu/>
             <div className="text-white min-vh-100 d-flex flex-column pt-4">
-             
               {children}
             </div>
           </main>
