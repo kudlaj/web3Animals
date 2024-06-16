@@ -4,9 +4,57 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .line {
   flex: 1;
   height: 1px;
   background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .line {
+    display: none;
+  }
+}
+.title {
+  font-size: 16px;
+}
+
+.titleActive {
+  font-weight: bold;
+}
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #9e9898; 
+}
+
+.icon {
+  position: relative;
+  top: -1px;
+}
+
+
+/* components/Step.module.css */
+.stepContainer {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.stepContainerActive {
+  opacity: 1;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .stepContainerInActive {
+    display: none;
+  }
+  .stepContainerActive {
+    margin: auto;
+  }
 }

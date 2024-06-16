@@ -28,7 +28,7 @@ const CreatePage: React.FC = () => {
 
   return (
 
-      <Card className={`${styles.cardBody} m-5`}>
+      <Card className={`${styles.cardBody} m-lg-5`}>
         <Card.Body >
           <Steps steps={stepsData} currentStep={step} />
           {step === 1 && <Step1 next={() => setStep(2)} />}

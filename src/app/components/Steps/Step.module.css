@@ -1,37 +1,6 @@
-/* components/Step.module.css */
-.stepContainer {
-  display: flex;
-  align-items: center;
-  opacity: 0.5;
-}
 
-.stepContainerActive {
-  opacity: 1;
-}
 
-.iconContainer {
-  width: 40px;
-  height: 40px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #9e9898; 
-}
 
-.icon {
-  position: relative;
-  top: -1px;
-}
-
-.title {
-  font-size: 16px;
-}
-
-.titleActive {
-  font-weight: bold;
-}
 .bgCircle {
   background-color: #212429;
 }
@@ -44,6 +13,7 @@
 .animalInfo {
   max-width: 300px;
   padding-top: 2rem;
+  min-width: 90%;
 }
 
 .animalCircle {
@@ -63,9 +33,26 @@
 
 
 .selectedAnimalCard {
+  
   transition: transform 0.6s;
   transform-style: preserve-3d;
   position: relative;
+}
+
+@media (min-width: 1100px) {
+  .selectedAnimalCard {
+    min-width: 30rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .selectedAnimalCard {
+    margin: 0rem 0rem;
+  }
+  .animalCard {
+    margin: 1rem 0rem;
+  }
 }
 
 .flipped {

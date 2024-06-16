@@ -41,6 +41,7 @@ const Step3: React.FC<StepProps> = ({ next, back }) => {
         description: selectedAnimal.customData.description,
         image: selectedAnimal.customData.image ?? selectedAnimal.animal.image,
         alias: selectedAnimal.animal.alias,
+        properties: selectedAnimal.animal.properties,
       });
     }
   }, [selectedAnimal]);

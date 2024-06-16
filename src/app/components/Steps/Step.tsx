@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import styles from './Step.module.css';
+import styles from './Steps.module.css';
 
 interface StepProps {
   icon: React.ReactNode;
@@ -10,7 +10,7 @@ interface StepProps {
 }
 
 const Step: React.FC<StepProps> = ({ icon, title, active }) => (
-  <div className={`px-3 ${styles.stepContainer} ${active ? styles.stepContainerActive : ''}`}>
+  <div className={`px-3 ${styles.stepContainer} ${active ? styles.stepContainerActive : styles.stepContainerInActive}`}>
     <div className={styles.iconContainer}>
       <div className={styles.icon}>{icon}</div>
     </div>

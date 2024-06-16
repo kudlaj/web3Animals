@@ -13,7 +13,7 @@ interface WeaponCardProps {
 }
 
 const WeaponCard: React.FC<WeaponCardProps> = ({ name, image, onClick, selected, description }) => (
-    <Card className={`bg-secondary text-light border-1 my-1 ${selected ? css.selected : ''}`}>
+    <Card className={`${css.animalCard} bg-secondary text-light border-1 my-1 ${selected ? css.selected : ''}`}>
       <Card.Body className="d-flex flex-column align-items-center">
         <div className={`${css.animalCircle} rounded-circle mb-3`} >
           <img src={`/weapons/${image}`} alt={name} width={150} height={150} onClick={onClick}  className="img-fluid rounded-circle" />
