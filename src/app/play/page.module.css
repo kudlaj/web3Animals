@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-image: url("/bg/london_rain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cardBody {
+  background-color: rgba(31, 31, 31, 0.5) !important; 
+}

@@ -1,4 +1,3 @@
-// store.ts
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import { createAnimalSlice } from './slices/animals';
@@ -10,11 +9,14 @@ type StoreState = AnimalState & SetupState;
 
 export const useBoundStore = create<StoreState>()(
   devtools(
-
+    persist(
       (set, get) => ({
         ...createAnimalSlice(set, get),
         ...createSetupSlice(set, get),
       }),
-     
+      {
+        name: 'cute-animals-store', 
+      }
+    )
   )
 );

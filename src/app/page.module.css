@@ -9,7 +9,16 @@
   background-repeat: no-repeat;
 }
 
-
+.mainPlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/bg/london_rain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .description {
   display: inherit;
